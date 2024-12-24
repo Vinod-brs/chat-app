@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/3da1a747b2.js"></script>
+    <title>Chat App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="d-flex bg-gradient">
+        <div class="d-flex flex-grow-1">
+          <nav class="courseTitle">
+            <button class="navbar-brand border-0">
+              <img src="https://vinod-brs.github.io/Meditation/assets/img/logo.png" alt="logo" />
+            </button>
+          </nav>
+          <div class="flex-grow-1">
+            <div class="ReactTitle ps-3 d-flex align-items-center">
+              <img src="https://w7.pngwing.com/pngs/452/24/png-transparent-js-logo-node-logos-and-brands-icon-thumbnail.png" alt="logo" />
+              <h3 class="mb-0">JS Apps with APIs</h3>
+            </div>
+            <div class="d-flex ps-3 align-items-center">
+              <div class="flex-grow-1">
+                <h4>Chat App</h4>
+                <p class="pb-0 mb-0 text-start">
+                  Purpose: Simple Chat app using Socket.IO
+                </p>
+                 <a href="https://github.com/Vinod-brs/chat-app" target="_blank">
+                    Git Repo
+                </a>
+                <img height="12px" src="https://vinod-brs.github.io/Meditation/assets/img/noun-link.png" class="ms-2" />
+                
+              </div>
+              <div class="link me-3">
+                  <p class="mb-0 py-0">
+                      <a href="https://socket.io/docs/v4/" target="_blank">
+                          https://socket.io/docs/v4/
+                      </a>
+                      <img height="12px" src="https://vinod-brs.github.io/Meditation/assets/img/noun-link.png" class="ms-2" />
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main role="main" class="container pt-5">
+        <div class="form-groups w-100 d-flex" id="user-info">
+          <form action="javascript:void(0);" class="d-flex">
+            <input type="text" class="form-control" placeholder="Your username" id="username"  autofocus/>
+            <div class="col-4 ms-2">
+              <button class="btn btn-primary" id="setUsername">Start!</button>
+            </div>
+          </form>  
+        </div>
+        <div class="position-relative">
+            <div class="btn-container form-groups position-absolute messages-divs w-100 overflow-hidden">
+              <div id="messages" class="w-100"></div>
+            </div>
+            <div class="form-groups w-100">
+                <!-- Main content -->
+                <ul class="container" id="container"></ul>
+                <!-- Main content -->
+                <form action="javascript:void(0);" id="input-form">
+                    <div class="row justify-content-md-center">
+                      <div class="col-1"></div>
+                      <div class="col-7">
+                        <div class="form-items">
+                          <input id="txt" type="text" placeholder="Enter Message" class="form-control" autofocus autocomplete="off" />
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <input  id="sendMessage" type='submit' class="btn btn-primary" value="Send Message" disabled />
+                      </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer footer-dark">
+        <div class="d-flex justify-content-between px-5">
+            <div>ALL RIGHTS RESERVED BRS STUDIO, INDIA</div>
+            <div>
+                <button onclick="setTheme('#1A4B84')" class="theme-switch theme-switch-chathams_blue"></button>
+                <button onclick="setTheme('#991E14')" class="theme-switch theme-switch-tamarillo"></button>
+                <button onclick="setTheme('#FEAD06')" class="theme-switch theme-switch-yellow_sea"></button>
+            </div>
+            <div>
+                <img src="https://vinod-brs.github.io/Meditation/assets/img/footer-logo.png" alt="logo" />
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+  </body>
+</html>
